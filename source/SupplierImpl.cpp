@@ -9,7 +9,8 @@
 #include <SupplierImpl.h>
 
 SupplierImpl::SupplierImpl(const std::string& message)
-:_message(message) {}
+    : _message(message) {
+}
 
 void SupplierImpl::setMessage(const std::string& message) {
   _message = message;

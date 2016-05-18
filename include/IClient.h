@@ -10,12 +10,15 @@ class IClient {
  public:
   IClient() = default;
   virtual ~IClient() = default;
-  virtual void exec() = 0;
+  virtual void
+  exec() = 0;
  private:
   IClient(const IClient& obj) = delete;
   IClient(IClient&& obj) = delete;
-  IClient& operator=(const IClient& obj) = delete;
-  IClient& operator=(IClient&& obj) = delete;
+  IClient&
+  operator=(const IClient& obj) = delete;
+  IClient&
+  operator=(IClient&& obj) = delete;
 };
 
 #endif /* INCLUDE_ICLIENT_H_ */

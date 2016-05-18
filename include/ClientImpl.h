@@ -11,15 +11,20 @@ class ISupplier;
 class ClientImpl : public IClient {
  public:
   ClientImpl() = default;
-  explicit ClientImpl(std::unique_ptr<ISupplier>&& supplierUp);
+  explicit
+  ClientImpl(std::unique_ptr<ISupplier>&& supplierUp);
   virtual ~ClientImpl() = default;
-  virtual void exec();
-  void setSupplier(std::unique_ptr<ISupplier>&& sullierUp);
+  virtual void
+  exec();
+  void
+  setSupplier(std::unique_ptr<ISupplier>&& sullierUp);
  private:
   ClientImpl(const ClientImpl& obj) = delete;
   ClientImpl(ClientImpl&& obj) = delete;
-  ClientImpl& operator=(const ClientImpl& obj) = delete;
-  ClientImpl& operator=(ClientImpl&& obj) = delete;
+  ClientImpl&
+  operator=(const ClientImpl& obj) = delete;
+  ClientImpl&
+  operator=(ClientImpl&& obj) = delete;
   std::unique_ptr<ISupplier> _supllierUp;
 };
 

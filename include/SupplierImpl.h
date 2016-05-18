@@ -11,15 +11,20 @@
 class SupplierImpl : public ISupplier {
  public:
   SupplierImpl() = default;
-  explicit SupplierImpl(const std::string& message);
+  explicit
+  SupplierImpl(const std::string& message);
   virtual ~SupplierImpl() = default;
-  void setMessage(const std::string& message);
-  virtual std::string exec();
+  void
+  setMessage(const std::string& message);
+  virtual std::string
+  exec();
  private:
   SupplierImpl(const SupplierImpl& obj) = delete;
   SupplierImpl(SupplierImpl&& obj) = delete;
-  SupplierImpl& operator=(const SupplierImpl& obj) = delete;
-  SupplierImpl& operator=(SupplierImpl&& obj) = delete;
+  SupplierImpl&
+  operator=(const SupplierImpl& obj) = delete;
+  SupplierImpl&
+  operator=(SupplierImpl&& obj) = delete;
   std::string _message;
 };
 

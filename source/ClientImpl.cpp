@@ -11,7 +11,8 @@
 #include <iostream>
 
 ClientImpl::ClientImpl(std::unique_ptr<ISupplier>&& supplierUp)
-: _supllierUp(std::move(supplierUp)) {}
+    : _supllierUp(std::move(supplierUp)) {
+}
 
 void ClientImpl::exec() {
   std::cout << _supllierUp->exec() << std::endl;
